@@ -1,7 +1,7 @@
 import { registerPartials } from './module/partials.js';
 import { voidhack } from "./module/config.js";
-import ghkItemSheet from "./module/sheets/ghkItemSheet.js";
-import ghkCharacterSheet from "./module/sheets/ghkCharacterSheet.js";
+import vhkItemSheet from "./module/sheets/vhkItemSheet.js";
+import vhkCharacterSheet from "./module/sheets/vhkCharacterSheet.js";
 
 async function preloadHandlebarsTemplates() {
   const templatePaths = [
@@ -15,18 +15,16 @@ async function preloadHandlebarsTemplates() {
   return loadTemplates(templatePaths);
 }
 
-
-
 Hooks.once("init", function () {
   console.log("voidhack | Initialising voidhack")
 
   CONFIG.voidhack = voidhack;
 
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("voidhack", ghkItemSheet, { makeDefault: true });
+  Items.registerSheet("voidhack", vhkItemSheet, { makeDefault: true });
 
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("voidhack", ghkCharacterSheet, { makeDefault: true });
+  Actors.registerSheet("voidhack", vhkCharacterSheet, { makeDefault: true });
 
   registerPartials();
 

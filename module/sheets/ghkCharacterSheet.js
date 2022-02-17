@@ -1,4 +1,4 @@
-export default class ghkCharacterSheet extends ActorSheet {
+export default class vhkCharacterSheet extends ActorSheet {
 
 
   static get defaultOptions() {

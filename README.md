@@ -15,7 +15,7 @@ Système de jeu pour la modification Voidhack, inspiré de Cairn et Into the Odd
 
 - Mettre à jour `template.json`
 - Virer le legacy code qui sert à rien
-- Remplacer toutes les mentions de goldhack (ghk..) par voidhack (vhk...)
+- Remplacer toutes les mentions de goldhack (vhk..) par voidhack (vhk...)
 
 ## Sprints
 

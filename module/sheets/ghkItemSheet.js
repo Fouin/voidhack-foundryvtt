@@ -1,4 +1,4 @@
-export default class ghkItemSheet extends ItemSheet {
+export default class vhkItemSheet extends ItemSheet {
 
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
