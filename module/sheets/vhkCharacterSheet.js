@@ -4,8 +4,8 @@ export default class vhkCharacterSheet extends ActorSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       // template: "systems/voidhack/templates/sheets/character-sheet.html",
-      width:400,
-      height: 500,
+      width: 400,
+      height: 600,
       classes: ["voidhack", "sheet", "actor"],
       dragDrop: [{dragSelector: ".items-group .item-card", dropSelector: null}]
     });
