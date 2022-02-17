@@ -36,4 +36,5 @@ Système de jeu pour la modification Voidhack, inspiré de Cairn et Into the Odd
 
 - [Knowledge base](https://foundryvtt.com/kb/)
 - [Documentation API](https://foundryvtt.com/api/)
+- [Introduction to system development](https://foundryvtt.com/article/system-development/)
 - [System development tutorial](https://foundryvtt.wiki/en/development/guides/SD-tutorial)
