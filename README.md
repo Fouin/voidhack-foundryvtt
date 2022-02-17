@@ -30,4 +30,10 @@ Système de jeu pour la modification Voidhack, inspiré de Cairn et Into the Odd
     - Quand l'inventaire est vide, il affiche 3 emplacement vide. D'autres emplacements s'ouvrent au fur et à mesure qu'ils sont remplis = [ if(empty) => {render {slots:3}}, if(full) => {render {slots:+1}}; ]
     - L'inventaire "Inventaire" ne peut pas contenir un poids (emplacements) total de + de 10 = [ Inventaire -> set_items_limit = 10; ]
     - Le joueur doit pouvoir déplacer ses objets et réordonner ses objets dans son inventaire = [ Drag'n'drop feature; ]
-    - Le joueur doit pouvoir créer ou supprimer un objet avec un menu contextuel (clique droit) = [ onRightClick => dropdown menu(create && delete); ]
+    - Le joueur doit pouvoir créer ou supprimer un objet avec un menu contextuel (clique droit) = [ onRightClick => dropdown menu(create && delete); 
+    
+## Ressources
+
+- [Knowledge base](https://foundryvtt.com/kb/)
+- [Documentation API](https://foundryvtt.com/api/)
+- [System development tutorial](https://foundryvtt.wiki/en/development/guides/SD-tutorial)
