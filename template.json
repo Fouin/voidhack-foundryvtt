@@ -1,0 +1,43 @@
+{
+"Actor": {
+  "types": ["character", "corporation"],
+  "character": {
+    "identity": "",
+    "title": "",
+    "hp": {
+      "value": 0,
+      "max": 0
+    },
+    "attributes":{
+      "primary":{
+        "body": 10,
+        "feel": 10,
+        "mind": 10,
+        "hand": 10
+      }
+    },
+    "notes": ""
+  },
+  "corporation": {
+    "notes": "",
+    "xp": 0,
+    "level": 1,
+    "identity": "",
+    "title": ""
+  }
+},
+"Item": {
+  "types": ["ability", "item"],
+  "ability": {
+    "description": "",
+    "active": false
+  },
+  "item": {
+    "description": "",
+    "quantity": 1,
+    "weight": 1,
+    "location": "hands",
+    "active": false
+  }
+}
+}

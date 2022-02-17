@@ -1,0 +1,93 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="character-header">
+    <div class="character-name">
+      <span>{{localize "voidhack.corpo.name"}}</span>
+      <input name="name" type="text" value="{{data.name}}" placeholder="Name" />
+    </div>
+    <div class="character-identity">
+      <span>{{localize "voidhack.corpo.identity"}}</span>
+      <input name="data.identity" type="text" value="{{data.data.identity}}" placeholder="{{localize "voidhack.corpo.identity"}}"/>
+    </div>
+    <div class="character-title">
+      <span>{{localize "voidhack.corpo.title"}}</span>
+      <input name="data.title" type="text" value="{{data.data.title}}" placeholder="{{localize "voidhack.corpo.title"}}"/>
+    </div>
+    <div class="character-level">
+      <span>{{localize "voidhack.corpo.level"}}</span>
+      <div class="character-level-box">
+        <div class="character-level-level"><input name="data.level" type="text" data-dtype="Number" value="{{data.data.level}}""/></div>
+        <div class="character-level-xp"><input name="data.xp" type="text" data-dtype="Number" value="{{data.data.xp}}""/></div>
+      </div>
+    </div>
+  </header>
+  <section class="character-estate">
+    <span class="section-title">{{localize "voidhack.estate"}}</span>
+    <div class="items-list">
+
+
+
+      <div class="items-group" data-location="estate">
+      <div class="items-group-title"><div class="items-group-name">{{localize "voidhack.estate"}}</div></div>
+      {{#each gameItems as |item id|}}
+      {{#if (eq item.data.location "estate")}}
+      <div class="item-card item" data-item-id="{{_id}}">
+      <img class="item-img" style="max-height:100%;" src="{{img}}"/>
+      <div class="item-name">{{#if (eq item.data.weight "0")}}<i>{{item.name}}</i>{{else}}{{#if (eq item.data.weight "2")}}<b>{{item.name}}</b>{{else}}{{item.name}}{{/if}}{{/if}}</div>{{#if (eq item.data.quantity "1")}}{{else}}<div class="item-quantity" data-itemid="{{_id}}">x{{item.data.quantity}}</div>{{/if}}
+      <a class="item-edit"><i class="fas fa-pen"></i></a>
+      <a class="item-delete"><i class="fas fa-trash"></i></a>
+      </div>
+      {{/if}}
+      {{/each}}
+      {{#each storageItems as |item id|}}
+      {{#if (eq item.data.location "estate")}}
+      <div class="item-card item" data-item-id="{{_id}}">
+      <img class="item-img" style="max-height:100%;" src="{{img}}"/>
+      <div class="item-name">{{localize name}}</div>
+      <a class="item-edit"><i class="fas fa-pen"></i></a>
+      <a class="item-delete"><i class="fas fa-trash"></i></a>
+      </div>
+      {{/if}}
+      {{/each}}
+      </div>
+
+      {{#each storageItems as |item id|}}
+      <div class="items-group" data-location="{{_id}}">
+      <div class="items-group-title item" data-item-id="{{_id}}">
+        <img class="item-img" style="max-height:100%;" src="{{img}}"/>
+        <div class="item-name">{{localize name}}</div>
+        <a class="item-edit"><i class="fas fa-pen"></i></a>
+        <a class="item-delete"><i class="fas fa-trash"></i></a>
+      </div>
+        {{#each ../gameItems as |item id|}}
+          {{#if (eq item.data.location ../_id)}}
+            <div class="item-card item " data-item-id="{{_id}}">
+              <img class="item-img" style="max-height:100%;" src="{{img}}"/>
+	      <div class="item-name">{{#if (eq item.data.weight "0")}}<i>{{item.name}}</i>{{else}}{{#if (eq item.data.weight "2")}}<b>{{item.name}}</b>{{else}}{{item.name}}{{/if}}{{/if}}</div>{{#if (eq item.data.quantity "1")}}{{else}}<div class="item-quantity" data-itemid="{{_id}}">x{{item.data.quantity}}</div>{{/if}}
+	      <a class="item-edit">
+	      <i class="fas fa-pen"></i>
+            </a>
+            <a class="item-delete">
+              <i class="fas fa-trash"></i>
+            </a>
+            </div>
+          {{/if}}
+        {{/each}}
+        {{#each ../storageItems as |item id|}}
+          {{#if (eq item.data.location ../_id)}}
+            <div class="item-card item " data-item-id="{{_id}}">
+            <img class="item-img" style="max-height:100%;" src="{{img}}"/>
+            <div class="item-name">{{item.name}}</div>
+            <a class="item-edit"><i class="fas fa-pen"></i></a>
+            <a class="item-delete"><i class="fas fa-trash"></i></a>
+            </div>
+          {{/if}}
+        {{/each}}
+        </div>
+      {{/each}}
+
+    </div>
+    <div class="notes-estate">
+      {{editor content=data.data.notes target="data.notes" button=true owner=owner editable=editable}}
+    </div>
+  </section>
+</form>

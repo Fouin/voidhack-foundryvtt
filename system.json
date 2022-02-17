@@ -1,0 +1,19 @@
+{
+  "name": "voidhack",
+  "title": "Voidhack",
+  "description": "Game system for Into the Odd and Cairn modification Voidhack",
+  "author": "onf, Booti & Hka",
+  "version": "1.1.0",
+  "minimumCoreVersion": "9",
+  "compatibleCoreVersion": "9",
+  "esmodules": ["voidhack.js"],
+  "styles": ["voidhack.css"],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "fr",
+      "name": "français",
+      "path": "lang/fr.json"
+    }
+  ]
+}

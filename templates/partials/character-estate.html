@@ -1,0 +1,53 @@
+<section class="character-estate">
+  <span class="section-title">patrimoine</span>
+  <div class="items-list">
+
+    <div class="items-group" data-location="reserve">
+    <div class="items-group-title"><div class="items-group-name">{{localize "voidhack.reserve"}}</div></div>
+    {{#each gameItems as |item id|}}
+    {{#if (eq item.data.location "reserve")}}
+    <div class="item-card item makeFlex" data-item-id="{{_id}}">
+    <a class="item-edit"><i class="fas fa-pen"></i></a>
+    <a class="item-delete paddingLeft"><i class="fas fa-trash"></i></a>
+    <div class="item-name paddingLeft">{{#if (eq item.data.weight "0")}}<i>{{item.name}}</i>{{else}}{{#if (eq item.data.weight "2")}}<b>{{item.name}}</b>{{else}}{{item.name}}{{/if}}{{/if}}</div>{{#if (eq item.data.quantity "1")}}{{else}}<div class="item-quantity paddingLeft" data-itemid="{{_id}}">x{{item.data.quantity}}</div>{{/if}}
+    </div>
+    {{/if}}
+    {{/each}}
+    {{#each storageItems as |item id|}}
+    {{#if (eq item.data.location "reserve")}}
+    <div class="item-card item makeFlex" data-item-id="{{_id}}">
+    <a class="item-edit"><i class="fas fa-pen"></i></a>
+    <a class="item-delete paddingLeft"><i class="fas fa-trash"></i></a>
+    <div class="item-name paddingLeft">{{localize name}}</div>
+    </div>
+    {{/if}}
+    {{/each}}
+    </div>
+
+    <div class="items-group" data-location="estate">
+    <div class="items-group-title"><div class="items-group-name">{{localize "voidhack.estate"}}</div></div>
+    {{#each gameItems as |item id|}}
+    {{#if (eq item.data.location "estate")}}
+    <div class="item-card item makeFlex" data-item-id="{{_id}}">
+    <a class="item-edit"><i class="fas fa-pen"></i></a>
+    <a class="item-delete paddingLeft"><i class="fas fa-trash"></i></a>
+    <div class="item-name paddingLeft">{{#if (eq item.data.weight "0")}}<i>{{item.name}}</i>{{else}}{{#if (eq item.data.weight "2")}}<b>{{item.name}}</b>{{else}}{{item.name}}{{/if}}{{/if}}</div>{{#if (eq item.data.quantity "1")}}{{else}}<div class="item-quantity paddingLeft" data-itemid="{{_id}}">x{{item.data.quantity}}</div>{{/if}}
+    </div>
+    {{/if}}
+    {{/each}}
+    {{#each storageItems as |item id|}}
+    {{#if (eq item.data.location "estate")}}
+    <div class="item-card item makeFlex" data-item-id="{{_id}}">
+    <a class="item-edit"><i class="fas fa-pen"></i></a>
+    <a class="item-delete paddingLeft"><i class="fas fa-trash"></i></a>
+    <div class="item-name paddingLeft">{{localize name}}</div>
+    </div>
+    {{/if}}
+    {{/each}}
+    </div>
+
+  </div>
+  <div class="notes-estate">
+    {{editor content=data.data.notes target="data.notes" button=true editable=editable}}
+  </div>
+</section>

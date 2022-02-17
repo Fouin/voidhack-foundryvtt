@@ -1,0 +1,20 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="item-header object">
+    <img class="item-img" src="{{data.img}}" data-edit="img" title="{{data.name}}" />
+    <div class="item-name">
+      <span>{{localize "voidhack.object"}}</span>
+      <input name="name" type="text" value="{{data.name}}" placeholder="Name" />
+    </div>
+    <div class="item-quantity">
+      <span>{{localize "voidhack.quantity"}}</span>
+      <input name="data.quantity" type="text" value="{{data.data.quantity}}"/>
+    </div>
+    <div class="item-weight">
+      <span>{{localize "voidhack.weight"}}</span>
+      <input name="data.weight" type="text" value="{{data.data.weight}}"/>
+    </div>
+  </header>
+  <div class="item-content">
+     {{editor content=data.data.description target="data.description" button=true owner=owner editable=editable}}
+  </div>
+</form>

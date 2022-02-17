@@ -1,0 +1,57 @@
+{
+  "voidhack": {
+    "name": "Nom",
+    "identity": "titre",
+    "title": "Titre",
+    "level": "Niveau",
+    "wounds": "Blessures",
+    "attributesText": "Attributs",
+    "abilitiesText": "Traits",
+    "sheet":{
+      "newItem": "Objet"
+    },
+    "ability": "Trait",
+    "quantity": "Quantité",
+    "weight": "Poids",
+    "object": "Objet",
+    "attributes": {
+      "primary":{
+        "body": "PHYS",
+        "mind": "EDUC",
+        "feel": "LUCI",
+        "hand": "MOTO"
+      }
+    },
+    "hp":{
+      "value": "PV",
+      "max": "Max"
+    },
+    "estate": "Compte",
+    "reserve": "Casier",
+    "abilityTypes":{
+      "attunement": "Affinité",
+      "scar": "Cicatrice",
+      "miracle": "Miracle"
+    },
+    "type": "Classe",
+    "description": "Description",
+    "tooltip":{
+      "identity": " ",
+      "title": "vocations, origines, affiliations"
+    },
+    "equipment": "Équipement",
+    "baseLocations":{
+      "hands": "Mains (max 2)",
+      "pockets": "Corps (max 4)",
+      "belt": "Ceinture",
+      "backpack": "Sac à dos (max 4)",
+      "gear": "Vêtements"
+    },
+    "corpo":{
+      "name": "Nom d'usage",
+      "identity": "Membres",
+      "title": "Nom légal de compagnie",
+      "level": "Réputation"
+    }
+  }
+}

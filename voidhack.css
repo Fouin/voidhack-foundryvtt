@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+.directory .directory-list .directory-item img{
+	display:none;
+}
+
+.window-app .window-content{
+  background: white;
+}
+
+.actor .window-content{
+  background: black;
+}
+
+.fichePerso{
+  color:white;
+  font-family: 'Share Tech Mono', monospace;
+  text-transform: lowercase;
+}
+
+.fichePerso input[type="text"], .fichePerso input[type="number"], .fichePerso input[type="password"], .fichePerso input[type="date"], .fichePerso input[type="time"]{
+  color:cyan;
+  height:unset;
+  border:none;
+  padding:0 0 0 5px;
+}
+
+.fichePerso input[type="text"]:focus, .fichePerso input[type="number"]:focus, .fichePerso input[type="password"]:focus, .fichePerso input[type="date"]:focus, .fichePerso input[type="time"]:focus{
+  box-shadow:none;
+}
+
+.makeFlex{
+  display:flex;
+}
+
+.paddingLeft{
+  padding-left:5px;
+}
+
+.items-group-name{
+  display:block;
+  width:100%;
+  background:white;
+  color:black;
+  font-weight:bold;
+}
+
+.characterAttributes__text, .section-title{
+  display:block;
+  width:100%;
+  color:white;
+  font-weight:bold;
+  text-transform: uppercase;
+  padding-top:10px;
+}
+
+.fichePerso .fas{
+  color:cyan;
+}
+
+.fichePerso a:hover {
+  text-shadow:none;
+}
+
+.notes-estate .editor .editor-content{
+  min-height: 300px;
+}
+
+.notes-estate .editor {
+  width: 100%;
+  min-height: 300px;
+}
+
+.notes-estate {
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.tox-tinymce{
+  background:white;
+}
+
+.item-header .item-img{
+  display:none;
+}
+
+.actor-profile{
+  display:none;
+}
+
+#actors .directory, #actors .directory-list, #actors .directory-item{
+  line-height:30px;
+}
+
+#actors .document-name::before {
+  content: "@ ";
+}
+
+#actors .entity-name{
+  font-family: 'Share Tech Mono', monospace;
+  padding-left:15px;
+}
+
+#items .directory, #items .directory-list, #items .directory-item{
+  line-height:30px;
+}
+
+#items .document-name::before {
+  content: "O ";
+}
+
+#items .entity-name{
+  font-family: 'Share Tech Mono', monospace;
+  padding-left:15px;
+}
+
+.item-profile{
+  display:none;
+}
+
+.sheet .editor-content {
+  height: 100%;
+  overflow-y: auto;
+  word-break: break-word;
+}
+
+.item-content .editor {
+  width: 100%;
+  height: 100%;
+}
+
+.item-content {
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+}

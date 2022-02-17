@@ -1,0 +1,27 @@
+<section class="characterAttributes">
+  <span class="characterAttributes__text">{{localize "voidhack.attributesText"}}</span>
+  <div class="characterAttributes__block">
+    <div class="stat-table">
+      <div class="stat-block makeFlex">
+        <div class="stat-block-label">
+          <span>{{localize "voidhack.hp.value"}}</span>
+        </div>
+        <div class="stat-block-value makeFlex">
+          <input type="text" name="data.hp.value" data-dtype="Number" value="{{data.data.hp.value}}" data-dtype="Number"/> / <input type="text" name="data.hp.max" data-dtype="Number" value="{{data.data.hp.max}}" data-dtype="Number"/>
+        </div>
+      </div>
+    </div>
+    <div class="stat-table primary">
+      {{#each data.data.attributes.primary as |attribute key|}}
+        <div class="stat-block makeFlex">
+          <div class="stat-block-label">
+            <span>{{localize (concat "voidhack.attributes.primary." key)}}</span>
+          </div>
+          <div class="stat-block-value">
+            <input type="text" name="data.attributes.primary.{{key}}" data-dtype="Number" value="{{attribute}}" data-dtype="Number"/>
+          </div>
+        </div>
+      {{/each}}
+      </div>
+  </div>
+</section>

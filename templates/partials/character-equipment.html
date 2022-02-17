@@ -1,0 +1,19 @@
+<section class="character-equipment">
+  <span class="section-title">{{localize "voidhack.equipment"}}</span>
+  <div class="items-list">
+    {{#each config.baseLocations as |name type|}}
+    <div class="items-group" data-location="{{type}}">
+    <div class="items-group-title makeFlex"><div class="items-group-name">{{localize name}}</div>{{#if (eq type "hands")}}<a class="item-create" data-type="item"> <i class="fas fa-plus"></i></a>{{/if}}</div>
+        {{#each ../gameItems as |item id|}}
+          {{#if (eq item.data.location type)}}
+            <div class="item-card item makeFlex" data-item-id="{{_id}}">
+            <a class="item-edit"><i class="fas fa-pen"></i></a>
+            <a class="item-delete paddingLeft"><i class="fas fa-trash"></i></a>
+            <div class="item-name paddingLeft">{{#if (eq item.data.weight "0")}}<i>{{item.name}}</i>{{else}}{{#if (eq item.data.weight "2")}}<b>{{item.name}}</b>{{else}}{{item.name}}{{/if}}{{/if}}</div>{{#if (eq item.data.quantity "1")}}{{else}}<div class="item-quantity paddingLeft" data-itemid="{{_id}}">x{{item.data.quantity}}</div>{{/if}}
+            </div>
+          {{/if}}
+        {{/each}}
+      </div>
+    {{/each}}
+  </div>
+</section>
