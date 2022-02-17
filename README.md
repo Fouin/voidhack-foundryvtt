@@ -19,7 +19,7 @@ Système de jeu pour la modification Voidhack, inspiré de Cairn et Into the Odd
 
 ## Sprints
 
-### Fonctionnalités fiche
+### Sprint 1 - Fonctionnalités fiche
 
 ![Mockup fiche](https://media.discordapp.net/attachments/905211408835309608/943862079205548043/Frame_1.png)
 
@@ -36,5 +36,4 @@ Système de jeu pour la modification Voidhack, inspiré de Cairn et Into the Odd
 
 - [Knowledge base](https://foundryvtt.com/kb/)
 - [Documentation API](https://foundryvtt.com/api/)
-- [Introduction to system development](https://foundryvtt.com/article/system-development/)
 - [System development tutorial](https://foundryvtt.wiki/en/development/guides/SD-tutorial)
