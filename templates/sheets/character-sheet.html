@@ -1,21 +1,21 @@
 <form class="{{cssClass}}" autocomplete="off">
   <div class="fiche">
     <section class="fiche-header">
-      <img class="profile" src="{{img}}" data-edit="img" title="{{name}}" height="100" width="100" />
+      <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
       <div class="headerblock">
-        <div class="headerfield">
+        <div class="headerfield name">
           <span class="headerfield-title">Nom</span>
           <input name="name" type="text" value="{{data.name}}" placeholder="" />
         </div>
-        <div class="headerfield">
+        <div class="headerfield cred">
           <span class="headerfield-title">Rép.</span>
           <input name="data.cred" type="text" value="{{data.data.cred}}" placeholder="" />
         </div>
-        <div class="headerfield">
+        <div class="headerfield occupation">
           <span class="headerfield-title">Vocation</span>
           <input name="data.occupation" type="text" value="{{data.data.occupation}}" placeholder="" />
         </div>
-        <div class="headerfield">
+        <div class="headerfield origin">
           <span class="headerfield-title">Origine</span>
           <input name="data.origin" type="text" value="{{data.data.origin}}" placeholder="" />
         </div>
@@ -26,8 +26,8 @@
         <div class="statblock">
           <span class="statblock-title">Vitalité</span>
           <div class="statblock-main">
-            <div class="attributeblock">
-              <div class="attributeblock-main">
+            <div class="attributeblock vita">
+              <div class="attributeblock-main vita">
                 <div class="attributeblock-value">
                   <input type="text" name="data.vita.value" data-dtype="Number" value="{{data.data.vita.value}}" data-dtype="Number"/>
                 </div>
@@ -38,7 +38,7 @@
               </div>
             </div>
             <div class="tickblock">
-              <input type="checkbox" id="critical" name="critical" checked>
+              <input type="checkbox" id="critical" name="data.critical" {{checked data.data.critical}}>
               <label for="critical">Critique ?</label>
             </div>
           </div>
@@ -98,7 +98,40 @@
         </div>
       </aside>
       <div class="fiche-inventory">
-        TODO : INVENTAIRE
+        <div class="inventoryblock">
+          <span class="inventoryblock-title">Inventaire</span>
+          <div class="inventoryblock-main">
+            <div class="itemblock">
+              <span class="itemblock-label">Main gauche</span>
+            </div>
+            <div class="itemblock righthand">
+              <span class="itemblock-label">Main droite</span>
+            </div>
+            <div class="itemblock">
+            </div>
+          </div>
+        </div>
+        <div class="inventoryblock">
+          <span class="inventoryblock-title">Traits / Implants</span>
+          <div class="inventoryblock-main">
+            <div class="itemblock">
+            </div>
+          </div>
+        </div>
+        <div class="inventoryblock">
+          <span class="inventoryblock-title">Casier</span>
+          <div class="inventoryblock-main">
+            <div class="itemblock">
+            </div>
+          </div>
+        </div>
+        <div class="inventoryblock">
+          <span class="inventoryblock-title">Capital</span>
+          <div class="inventoryblock-main">
+            <div class="itemblock">
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </div>
